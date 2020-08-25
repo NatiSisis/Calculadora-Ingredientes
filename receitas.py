@@ -1,28 +1,33 @@
-ingredientesParcial = []
+ingredientes_parcial = []
 
 app_rodando = True
 
 while app_rodando:
-	ingredienteParcial = input("Qual o ingrediente: ")
-	pesoParcial = input("Qual a quantidade utilizada deste ingrediente: ")
+	ingrediente_parcial = input("Qual o ingrediente: ")
+	peso_parcial = input("Qual a quantidade utilizada deste ingrediente: ")
+	tempo_forno = input("Qual o tempo de forno(em minutos): ")
+	tempo_cozimento = input("Qual o tempo de cozimento(em minutos): ")
 	#valorParcial = 
-
+	'''considerar tempo para outros equipamentos para padarias, aba de configuração de insumos, como tamanho
+	do botijão, consumo do fogao/forno industrial, batedeiras, masseiras.. '''
 	id = 1
 
-	if len(ingredientesParcial) > 0:
-		ultimoId = ingredientesParcial[len(ingredientesParcial) - 1]['id']
+	if len(ingredientes_parcial) > 0:
+		ultimoId = ingredientes_parcial[len(ingredientes_parcial) - 1]['id']
 		id = ultimoId + 1
 
-	ingredienteParcial = {
+	ingrediente_parcial = {
 		"id" : id,
-		"Ingrediente" : ingredienteParcial,
-		"Quanidade Parcial" : pesoParcial
+		"Ingrediente" : ingrediente_parcial,
+		"Quantidade Parcial" : peso_parcial,
+		"Tempo de forno" : tempo_forno,
+		"Tempo de cozimento" : tempo_cozimento,
 	}
 
-	ingredientesParcial.append(ingredienteParcial)
+	ingredientes_parcial.append(ingrediente_parcial)
 
-	print(ingredientesParcial)
-	deve_continuar = input("Cadastrar outro cozinheiro? (S/n)")
+	print(ingredientes_parcial)
+	deve_continuar = input("Cadastrar outro ingrediente? (S/n)")
 	if deve_continuar.lower() == "n":
 		print('Até mais')
 		app_rodando = False
