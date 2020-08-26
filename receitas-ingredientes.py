@@ -5,11 +5,7 @@ app_rodando = True
 while app_rodando:
 	ingrediente_parcial = input("Qual o ingrediente: ")
 	peso_parcial = input("Qual a quantidade utilizada deste ingrediente: ")
-	tempo_forno = input("Qual o tempo de forno(em minutos): ")
-	tempo_cozimento = input("Qual o tempo de cozimento(em minutos): ")
-	#valorParcial = 
-	'''considerar tempo para outros equipamentos para padarias, aba de configuração de insumos, como tamanho
-	do botijão, consumo do fogao/forno industrial, batedeiras, masseiras.. '''
+
 	id = 1
 
 	if len(ingredientes_parcial) > 0:
@@ -22,6 +18,7 @@ while app_rodando:
 		"Quantidade Parcial" : peso_parcial,
 		"Tempo de forno" : tempo_forno,
 		"Tempo de cozimento" : tempo_cozimento,
+		"Tempo de preparo" : tempo_preparo
 	}
 
 	ingredientes_parcial.append(ingrediente_parcial)
@@ -33,6 +30,3 @@ while app_rodando:
 		app_rodando = False
 	elif deve_continuar.lower() != 's' and deve_continuar.strip() != '':
 		print('Você digtou um valor errado, o app vai continuar')
-
-
-
